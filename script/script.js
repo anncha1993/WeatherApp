@@ -11,13 +11,22 @@ function update(){
 	xmlhttp.send();
 
 
+	
+
+
 }
 
 
 function statechange(){
-
 	if (xmlhttp.readyState === 4 && xmlhttp.status ===200) {
-		document.getElementById("data").innerHTML = xmlhttp.responseText;
+		var info = JSON.parse(xmlhttp.responseText);
+		for (var i = 0; i < info.weather.length; i++) {
+			var display = "Været i London" + JSON.stringify(info.weather[i].main);
+			console.log(JSON.stringify(info.weather[i].main));
+		}
+		
+		document.getElementById("data").innerHTML = display;
+		
 	}
 }
 
