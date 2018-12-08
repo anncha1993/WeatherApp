@@ -7,6 +7,33 @@ body{
     header{
 		background-color: #202020;
 		padding: 10px;
+
+		nav{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+			padding:1em;
+
+			.logo{
+				font-size:30px;
+				color:white;
+				text-transform:uppercase;
+			}
+
+
+			ul{
+				padding: 0px;
+				list-style: none;
+				margin:0px;
+				
+				li{
+					display:inline;
+					margin:0px 10px;
+					color:white;
+					text-transform:uppercase;
+				}
+			}
+		}
     }
 
     .cities{
@@ -43,6 +70,8 @@ body{
 	    height: 30px;
 		background-color: #1a1a1a;
 		padding: 2em;
+		color:white;
+		text-transform:uppercase;
     }
 
 }
