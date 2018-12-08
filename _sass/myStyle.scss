@@ -20,7 +20,6 @@ body{
 				text-transform:uppercase;
 			}
 
-
 			ul{
 				padding: 0px;
 				list-style: none;
@@ -58,9 +57,14 @@ body{
 			text-align:center;
 			margin: 1em 0em;
 
-			span{
-				font-size: 22px;
+			ul{
+				padding:0px;
+				list-style:none;
 
+				li{
+					font-size: 22px;
+
+				}
 			}
 
 		}
