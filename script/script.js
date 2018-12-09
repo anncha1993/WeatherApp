@@ -3,7 +3,7 @@ var data;
 
 
 function update(){
-
+	/*fetching extern data from openweathermap*/
 	data = new XMLHttpRequest();
 	data.onreadystatechange = displayData;
 	data.open("GET", "http://api.openweathermap.org/data/2.5/group?id=2643743,6453366,764679&APPID=c6331badce9c725318e21ae37054570f&units=metric", true);
@@ -14,6 +14,7 @@ function update(){
 }
 
 function displayData(){
+	/*Handeling data from JSON*/
 	if (data.readyState === 4 && data.status ===200) {
 		var info = JSON.parse(data.responseText);
 		for (var i = 0; i < info.list.length; i++) {
